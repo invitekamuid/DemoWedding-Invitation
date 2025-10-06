@@ -23,119 +23,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     
     <style>
-        /* Base styles from reference */
+        /* CSS Anda tidak berubah, jadi saya persingkat di sini */
         body { background-color: #303333 !important; font-family: "Poppins", sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: "Averia Serif Libre", cursive; color: #ff9c1f !important; }
         p { color: #fff !important; font-family: "Poppins", sans-serif; }
-        .fh5co-loader { /* Styling for loader if any */ }
-        #page { position: relative; }
-        .text-center { text-align: center; }
+        #page { position: relative; } .text-center { text-align: center; }
         .btn { border-radius: 4px; padding: 10px 20px; font-family: "Poppins", sans-serif; }
         .btn-primary { background: #ff9c1f; border: 2px solid #ff9c1f; color: #000; }
         .btn-primary:hover, .btn-primary:focus { background: transparent; color: #ff9c1f; border-color: #ff9c1f; }
-
-        /* Cover Section */
-        #awal {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            position: fixed;
-            color: white !important;
-            right: 0; left: 0; top: 0; bottom: 0;
-            z-index: 999999;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            text-align: center;
-            padding-bottom: 100px;
-        }
-        #awal.hidden {
-             transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-             transform: translateY(-100%);
-             opacity: 0;
-             pointer-events: none;
-        }
+        #awal { background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg') no-repeat center center; background-size: cover; height: 100vh; position: fixed; color: white !important; right: 0; left: 0; top: 0; bottom: 0; z-index: 999999; display: flex; align-items: flex-end; justify-content: center; text-align: center; padding-bottom: 100px; }
+        #awal.hidden { transition: transform 1s ease-in-out, opacity 1s ease-in-out; transform: translateY(-100%); opacity: 0; pointer-events: none; }
         .awal-dalam h1 { font-family: 'Sacramento', cursive; font-size: 58px; color: #ff9c1f !important; line-height: 1.2; }
         .awal-dalam h3 { color: #fff !important; }
         .button-black { background-color: #ff9c1f !important; border-style: none; border-radius: 8px; color: #000; height: 40px; padding: 0 20px; font-weight: bold; }
-
-        /* Main Sections Layout */
         .box { padding: 80px 0; position: relative;}
-        .box-1 { 
-            background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Cowokcewk.jpg') no-repeat center center;
-            background-size: cover;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .box-3 {
-            background: url('https://indoinvite.com/nikah/template/black-template/black-java/BJ-BC.jpg') repeat-y center center;
-            background-size: contain;
-            background-color: #000;
-        }
-        .box-4 {
-            background: url('https://indoinvite.com/nikah/template/bee-classic/bg-java.png');
-            background-color: #292929;
-            background-size: 700px;
-        }
-        .box-51 {
-            background-color: #292929;
-            background-image: url('https://indoinvite.com/nikah/template/honey-bali/bg-batu.jpg');
-        }
-        .box-divider {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Couple Details */
+        .box-1 { background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Cowokcewk.jpg') no-repeat center center; background-size: cover; min-height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        .box-3 { background: url('https://indoinvite.com/nikah/template/black-template/black-java/BJ-BC.jpg') repeat-y center center; background-size: contain; background-color: #000; }
+        .box-4 { background: url('https://indoinvite.com/nikah/template/bee-classic/bg-java.png'); background-color: #292929; background-size: 700px; }
+        .box-51 { background-color: #292929; background-image: url('https://indoinvite.com/nikah/template/honey-bali/bg-batu.jpg'); }
+        .box-divider { width: 100%; height: auto; }
         .circle-rela { position: relative; background-color: #ff9c1f; clip-path: circle(); width: 160px; margin: 0 auto; height: 160px; }
         .circle-img { width: 150px; height: 150px; object-fit: cover; position: absolute; top: 5px; left: 5px; border-radius: 50%; }
         .detail-pengantin p { font-size: 14px; margin: 2px 0; color: #fff !important; }
-
-        /* Countdown */
         .simply-countdown { display: flex; justify-content: center; gap: 10px; }
         .simply-countdown > .simply-section { display: inline-block; width: 80px; height: 80px; background: #ff9c1f; border-radius: 10px; position: relative; animation: pulse 1s ease infinite; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .simply-countdown > .simply-section .simply-amount,
-        .simply-countdown > .simply-section .simply-word { color: #000000 !important; font-weight: bold; }
+        .simply-countdown > .simply-section .simply-amount, .simply-countdown > .simply-section .simply-word { color: #000000 !important; font-weight: bold; }
         .simply-amount { font-size: 24px !important; }
         .simply-word { font-size: 12px !important; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-
-        /* Gallery */
         #fh5co-gallery .gallery-item { display: block; overflow: hidden; margin-bottom: 10px; }
         #fh5co-gallery .gallery-item img { width: 100%; height: auto; transition: transform 0.3s; }
         #fh5co-gallery .gallery-item:hover img { transform: scale(1.1); }
         .frame-youtube { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px auto; }
         .frame-youtube iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        
-        /* ADDED: Gift Section */
-        .rek_each_soft_white {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px auto;
-            max-width: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        .rek_each_soft_white { background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; padding: 15px; margin: 15px auto; max-width: 400px; display: flex; align-items: center; justify-content: space-between; }
         .rek_gambar img { height: 25px; max-width: 80px; }
         .rek_kiri p { color: #333 !important; margin: 0; text-align: left; }
         .rek_norek { font-weight: bold; font-size: 1.1em; }
         .rek_an { font-size: 0.9em; }
         .rek_copy { background: #ff9c1f !important; border: none !important; color: #000 !important; }
-
-        /* RSVP / Ucapan Form */
         .form-ucapan { background: rgba(0,0,0,0.5); padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
         .form-control { background-color: #f8f8f8 !important; border: none; color: #333; }
         .box-ucapan { background: #fff; color: #333; padding: 20px; max-width: 600px; margin: 20px auto; border-radius: 10px; }
         .box-ucapan .ucapan-item { border-bottom: 1px solid #eee; padding: 15px 0; text-align: left;}
         .box-ucapan .ucapan-item p { color: #555 !important; }
         .box-ucapan .ucapan-item small { color: #999; }
-        
-        /* Footer & Bottom Nav */
         #fh5co-footer { background-color: #ff9c1fb3 !important; padding: 50px 0; }
         .fix-menu { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 440px; background-color: #ff9c1f !important; border-radius: 50px; padding: 10px; z-index: 999; display: flex; justify-content: space-around; }
         .fix-menu .item1 { cursor: pointer; text-align: center; }
@@ -181,7 +113,6 @@
                         <h1 style="font-family: 'Sacramento', cursive; font-size: 40px; margin-top: 20px;">Asep</h1>
                         <div class="detail-pengantin">
                             <p>Putra dari Bapak Budi</p>
-                            
                             <p>Ibu Komariah</p>
                         </div>
                     </div>
@@ -204,7 +135,7 @@
         </div>
         
         <div class="box box31">
-            <div class="container">
+            <div class="container text-center">
                 <h3>Hitung Mundur</h3>
                 <h1 style="font-size: 70px;">Menuju Acara</h1>
                 <div style="height: 50px"></div>
@@ -218,7 +149,6 @@
         </div>
 
         <div id="fh5co-event" class="box-4 text-center">
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -247,9 +177,9 @@
                          <h3>Lokasi Acara</h3>
                          <p style="color: #fff !important;"><strong>JW Marriott Hotel Medan</strong><br>Jl. Putri Hijau No.10, Kesawan, Kec. Medan Bar., Kota Medan, Sumatera Utara</p>
                          <div class="frame-youtube" style="border: 5px solid #ff9c1f; border-radius: 10px; margin-top: 20px;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.983905845674!2d98.67756997584523!3d3.591393650228301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131c77f094627%3A0xe3e63e793d5c5897!2sJW%20Marriott%20Hotel%20Medan!5e0!3m2!1sen!2sid!4v1701186782813!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.980902422503!2d98.67576931535506!3d3.59325965126838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131c77f72223b%3A0x3b723f5a7206d2b!2sJW%20Marriott%20Hotel%20Medan!5e0!3m2!1sen!2sid!4v1670929841263!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                          </div>
-                         <a href="https://maps.google.com/?cid=6086364269873275390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-primary" style="margin-top:20px;">Buka di Google Maps</a>
+                         <a href="https://maps.app.goo.gl/3X5g8bZ2qY8R7sCq9" target="_blank" class="btn btn-primary" style="margin-top:20px;">Buka di Google Maps</a>
                      </div>
                  </div>
             </div>
@@ -337,15 +267,15 @@
             </div>
         </div>
 
-<footer id="fh5co-footer" role="contentinfo">
-    <div class="container text-center">
-        <p style="color:#000 !important">Terima kasih atas doa dan restu Anda.</p>
-        <h1 style="font-family: 'Sacramento', cursive; font-size: 50px; color: #000 !important;">Asep & Wulan</h1>
-        <p style="color:#000 !important; font-size: 12px; margin-top: 20px;">
-            &copy; invitekamuid - All Rights Reserved.
-        </p>
-        </div>
-</footer>
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container text-center">
+                <p style="color:#000 !important">Terima kasih atas doa dan restu Anda.</p>
+                <h1 style="font-family: 'Sacramento', cursive; font-size: 50px; color: #000 !important;">Asep & Wulan</h1>
+                <p style="color:#000 !important; font-size: 12px; margin-top: 20px;">
+                    © invitekamuid - All Rights Reserved.
+                </p>
+            </div>
+        </footer>
     </div>
     
     <div class="fix-menu" id="bottom_menu" style="display: none;">
@@ -368,8 +298,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
     <script>
         $(document).ready(function() {
+            // =================================================================
+            // 1. Inisialisasi Firebase
+            // =================================================================
+            const firebaseConfig = {
+                apiKey: "AIzaSyBVw0xUwoH2hpJg7k0tY8gyOcCJWedAzsE",
+                authDomain: "undangan-asep-wulan.firebaseapp.com",
+                projectId: "undangan-asep-wulan",
+                storageBucket: "undangan-asep-wulan.firebasestorage.app",
+                messagingSenderId: "760215930855",
+                appId: "1:760215930855:web:ca71237c6c1be9a11f5f42"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            // =================================================================
+
+
+            // Kode lain-lain (AOS, Open Button, Countdown, dll.)
             AOS.init({ duration: 1000, once: true });
 
             const urlParams = new URLSearchParams(window.location.search);
@@ -401,12 +352,13 @@
             let countdownInterval = setInterval(function() {
                 let now = new Date().getTime();
                 let distance = countdownDate - now;
-                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                $('#simply-countdown').html(`<div class="simply-section"><span class="simply-amount">${days}</span><span class="simply-word">Hari</span></div><div class="simply-section"><span class="simply-amount">${hours}</span><span class="simply-word">Jam</span></div><div class="simply-section"><span class="simply-amount">${minutes}</span><span class="simply-word">Menit</span></div><div class="simply-section"><span class="simply-amount">${seconds}</span><span class="simply-word">Detik</span></div>`);
-                if (distance < 0) {
+                if (distance > 0) {
+                    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    $('#simply-countdown').html(`<div class="simply-section"><span class="simply-amount">${days}</span><span class="simply-word">Hari</span></div><div class="simply-section"><span class="simply-amount">${hours}</span><span class="simply-word">Jam</span></div><div class="simply-section"><span class="simply-amount">${minutes}</span><span class="simply-word">Menit</span></div><div class="simply-section"><span class="simply-amount">${seconds}</span><span class="simply-word">Detik</span></div>`);
+                } else {
                     clearInterval(countdownInterval);
                     $('#simply-countdown').html("<h4>Acara telah berlangsung</h4>");
                 }
@@ -418,40 +370,72 @@
                  $('html, body').animate({ scrollTop: $(selector).offset().top }, 1000);
             }
 
-            // Copy rekening button
             $('.rek_copy').on('click', function() {
                 var rek = $(this).data('rek');
                 navigator.clipboard.writeText(rek);
                 $(this).text('Copied!');
-                setTimeout(() => {
-                    $(this).text('Copy');
-                }, 2000);
+                setTimeout(() => { $(this).text('Copy'); }, 2000);
             });
             
-            const LS_KEY = 'ucapan_asep_wulan_v3';
-            function loadUcapan() {
-                const ucapanData = JSON.parse(localStorage.getItem(LS_KEY)) || [];
-                $('#list-ucapan').empty();
-                if(ucapanData.length > 0){
-                    ucapanData.slice().reverse().forEach(ucapan => {
-                        $('#list-ucapan').append(`<div class="ucapan-item"><strong>${ucapan.nama} <span style="font-size: 12px; color: ${ucapan.status === 'Hadir' ? 'green' : 'red'};">(${ucapan.status})</span></strong><p>${ucapan.pesan}</p></div>`);
-                    });
-                } else {
-                     $('#list-ucapan').append('<p style="color: #555;">Belum ada ucapan.</p>');
-                }
-            }
-            loadUcapan();
+            // =================================================================
+            // 2. LOGIKA BARU: Mengambil dan Menampilkan Ucapan dari Firebase
+            // =================================================================
+            const ucapanCollection = db.collection("ucapan").orderBy("timestamp", "desc");
 
+            ucapanCollection.onSnapshot((snapshot) => {
+                $('#list-ucapan').empty();
+                if (snapshot.empty) {
+                    $('#list-ucapan').append('<p style="color: #555;">Belum ada ucapan. Jadilah yang pertama!</p>');
+                } else {
+                    snapshot.forEach(doc => {
+                        const ucapan = doc.data();
+                        const statusColor = ucapan.status === 'Hadir' ? 'green' : '#c83a3a';
+                        const ucapanHTML = `
+                            <div class="ucapan-item">
+                                <strong>
+                                    ${ucapan.nama} 
+                                    <span style="font-size: 12px; color: ${statusColor};">(${ucapan.status})</span>
+                                </strong>
+                                <p>${ucapan.pesan}</p>
+                            </div>`;
+                        $('#list-ucapan').append(ucapanHTML);
+                    });
+                }
+            }, (error) => {
+                console.error("Gagal mengambil data ucapan: ", error);
+                $('#list-ucapan').html('<p style="color: red;">Gagal memuat ucapan. Periksa koneksi atau pengaturan Firebase.</p>');
+            });
+
+
+            // =================================================================
+            // 3. LOGIKA BARU: Mengirim Ucapan ke Firebase
+            // =================================================================
             $('#form-ucapan').submit(function(e) {
                 e.preventDefault();
-                let ucapanData = JSON.parse(localStorage.getItem(LS_KEY)) || [];
-                ucapanData.push({ nama: $('#nama-ucapan').val(), status: $('#status-kehadiran').val(), pesan: $('#pesan-ucapan').val() });
-                localStorage.setItem(LS_KEY, JSON.stringify(ucapanData));
-                loadUcapan();
-                $(this)[0].reset();
-                alert('Terima kasih atas konfirmasi dan ucapannya!');
+                
+                const submitButton = $(this).find('button[type="submit"]');
+                submitButton.prop('disabled', true).text('Mengirim...');
+
+                db.collection("ucapan").add({
+                    nama: $('#nama-ucapan').val(),
+                    status: $('#status-kehadiran').val(),
+                    pesan: $('#pesan-ucapan').val(),
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                })
+                .then(() => {
+                    console.log("Ucapan berhasil dikirim!");
+                    $(this)[0].reset();
+                    alert('Terima kasih atas konfirmasi dan ucapannya!');
+                })
+                .catch((error) => {
+                    console.error("Error saat mengirim ucapan: ", error);
+                    alert('Maaf, terjadi kesalahan saat mengirim ucapan.');
+                })
+                .finally(() => {
+                    submitButton.prop('disabled', false).text('Kirim');
+                });
             });
         });
     </script>
 </body>
-</html>
+            </html>
