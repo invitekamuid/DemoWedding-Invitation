@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undangan Pernikahan - Asep & Wulan</title>
+
+    <meta property="og:title" content="The Wedding of Asep & Wulan" />
+    <meta property="og:description" content="Kami mengundang Anda untuk datang di acara kami" />
+    <meta property="og:image" content="https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg" />
+    <meta name="description" content="The Wedding of Asep & Wulan" />
+
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    
+    <style>
+        /* Base styles from reference */
+        body { background-color: #303333 !important; font-family: "Poppins", sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: "Averia Serif Libre", cursive; color: #ff9c1f !important; }
+        p { color: #fff !important; font-family: "Poppins", sans-serif; }
+        .fh5co-loader { /* Styling for loader if any */ }
+        #page { position: relative; }
+        .text-center { text-align: center; }
+        .btn { border-radius: 4px; padding: 10px 20px; font-family: "Poppins", sans-serif; }
+        .btn-primary { background: #ff9c1f; border: 2px solid #ff9c1f; color: #000; }
+        .btn-primary:hover, .btn-primary:focus { background: transparent; color: #ff9c1f; border-color: #ff9c1f; }
+
+        /* Cover Section */
+        #awal {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            position: fixed;
+            color: white !important;
+            right: 0; left: 0; top: 0; bottom: 0;
+            z-index: 999999;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        #awal.hidden {
+             transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+             transform: translateY(-100%);
+             opacity: 0;
+             pointer-events: none;
+        }
+        .awal-dalam h1 { font-family: 'Sacramento', cursive; font-size: 58px; color: #ff9c1f !important; line-height: 1.2; }
+        .awal-dalam h3 { color: #fff !important; }
+        .button-black { background-color: #ff9c1f !important; border-style: none; border-radius: 8px; color: #000; height: 40px; padding: 0 20px; font-weight: bold; }
+
+        /* Main Sections Layout */
+        .box { padding: 80px 0; position: relative;}
+        .box-1 { 
+            background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg') no-repeat center center;
+            background-size: cover;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .box-3 {
+            background: url('https://indoinvite.com/nikah/template/black-template/black-java/BJ-BC.jpg') repeat-y center center;
+            background-size: contain;
+            background-color: #000;
+        }
+        .box-4 {
+            background: url('https://indoinvite.com/nikah/template/bee-classic/bg-java.png');
+            background-color: #292929;
+            background-size: 700px;
+        }
+        .box-51 {
+            background-color: #292929;
+            background-image: url('https://indoinvite.com/nikah/template/honey-bali/bg-batu.jpg');
+        }
+        .box-divider {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Couple Details */
+        .circle-rela { position: relative; background-color: #ff9c1f; clip-path: circle(); width: 160px; margin: 0 auto; height: 160px; }
+        .circle-img { width: 150px; height: 150px; object-fit: cover; position: absolute; top: 5px; left: 5px; border-radius: 50%; }
+        .detail-pengantin p { font-size: 14px; margin: 2px 0; color: #fff !important; }
+
+        /* Countdown */
+        .simply-countdown { display: flex; justify-content: center; gap: 10px; }
+        .simply-countdown > .simply-section { display: inline-block; width: 80px; height: 80px; background: #ff9c1f; border-radius: 10px; position: relative; animation: pulse 1s ease infinite; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .simply-countdown > .simply-section .simply-amount,
+        .simply-countdown > .simply-section .simply-word { color: #000000 !important; font-weight: bold; }
+        .simply-amount { font-size: 24px !important; }
+        .simply-word { font-size: 12px !important; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+        /* Gallery */
+        #fh5co-gallery .gallery-item { display: block; overflow: hidden; margin-bottom: 10px; }
+        #fh5co-gallery .gallery-item img { width: 100%; height: auto; transition: transform 0.3s; }
+        #fh5co-gallery .gallery-item:hover img { transform: scale(1.1); }
+        .frame-youtube { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 20px auto; }
+        .frame-youtube iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        /* ADDED: Gift Section */
+        .rek_each_soft_white {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px auto;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .rek_gambar img { height: 25px; max-width: 80px; }
+        .rek_kiri p { color: #333 !important; margin: 0; text-align: left; }
+        .rek_norek { font-weight: bold; font-size: 1.1em; }
+        .rek_an { font-size: 0.9em; }
+        .rek_copy { background: #ff9c1f !important; border: none !important; color: #000 !important; }
+
+        /* RSVP / Ucapan Form */
+        .form-ucapan { background: rgba(0,0,0,0.5); padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
+        .form-control { background-color: #f8f8f8 !important; border: none; color: #333; }
+        .box-ucapan { background: #fff; color: #333; padding: 20px; max-width: 600px; margin: 20px auto; border-radius: 10px; }
+        .box-ucapan .ucapan-item { border-bottom: 1px solid #eee; padding: 15px 0; text-align: left;}
+        .box-ucapan .ucapan-item p { color: #555 !important; }
+        .box-ucapan .ucapan-item small { color: #999; }
+        
+        /* Footer & Bottom Nav */
+        #fh5co-footer { background-color: #ff9c1fb3 !important; padding: 50px 0; }
+        .fix-menu { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 440px; background-color: #ff9c1f !important; border-radius: 50px; padding: 10px; z-index: 999; display: flex; justify-content: space-around; }
+        .fix-menu .item1 { cursor: pointer; text-align: center; }
+        .fix-menu img { width: 25px; filter: invert(1); }
+    </style>
+</head>
+<body>
+    <div class="fh5co-loader"></div>
+
+    <div id="awal">
+        <div class="awal-dalam">
+            <h3>Wedding Invitation</h3>
+            <h1>Asep & Wulan</h1>
+            <br>
+            <h3 style="margin-top: 20px;">Kepada Yth.</h3>
+            <h3 id="guestNameTo" style="margin-top: -10px;">Bapak/Ibu/Saudara/i</h3>
+            <br>
+            <button id="btn_open" class="button-black" type="button">Buka Undangan</button>
+        </div>
+    </div>
+    
+    <div id="page" style="display: none;">
+        <div id="fh5co-header" class="box-1 text-center">
+            <h3 data-aos="fade-up">The Wedding Of</h3>
+            <h1 data-aos="fade-up" style="font-family: 'Sacramento', cursive; font-size: 70px;">Asep & Wulan</h1>
+        </div>
+
+        <div id="fh5co-couple" class="box-3 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 data-aos="fade-up">Pasangan Pengantin</h2>
+                        <p data-aos="fade-up" style="max-width: 700px; margin: 20px auto;">
+                           Dengan memohon rahmat dan ridho-Mu ya Allah, kami bersatu dalam ikatan suci pernikahan. Semoga langkah kami selalu dalam lindungan-Mu.
+                        </p>
+                    </div>
+                </div>
+                <div class="couple-wrap">
+                    <div class="col-md-5 col-md-offset-1 text-center" data-aos="fade-right">
+                         <div class="circle-rela">
+                            <img class="circle-img" src="Cowok.jpg" alt="Groom">
+                        </div>
+                        <h1 style="font-family: 'Sacramento', cursive; font-size: 40px; margin-top: 20px;">Asep</h1>
+                        <div class="detail-pengantin">
+                            <p>Putra dari Bapak Budi</p>
+                            
+                            <p>Ibu Komariah</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1 text-center">
+                        <h2 style="font-size: 90px; margin-top: 80px;">&</h2>
+                    </div>
+                    <div class="col-md-5 text-center" data-aos="fade-left">
+                         <div class="circle-rela">
+                            <img class="circle-img" src="Cewek.jpg" alt="Bride">
+                        </div>
+                        <h1 style="font-family: 'Sacramento', cursive; font-size: 40px; margin-top: 20px;">Wulandari</h1>
+                        <div class="detail-pengantin">
+                            <p>Putri dari Pasangan</p>
+                            <p>Bapak Abdullah &</p>
+                            <p>Ibu Fatimah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box box31">
+            <div class="container">
+                <h3>Hitung Mundur</h3>
+                <h1 style="font-size: 70px;">Menuju Acara</h1>
+                <div style="height: 50px"></div>
+                <div id="simply-countdown" class="simply-countdown"></div>
+                <div style="height: 50px"></div>
+                 <p data-aos="zoom-in" style="font-size: 16px; font-style: italic; max-width: 700px; margin: 20px auto;">
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+                    <br><strong>(QS. Ar-Rum: 21)</strong>
+                </p>
+            </div>
+        </div>
+
+        <div id="fh5co-event" class="box-4 text-center">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 data-aos="fade-up" style="color: #fff !important;">Waktu & Tempat</h3>
+                        <h1 data-aos="fade-up">Acara</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="event-wrap">
+                            <h3>Akad Nikah</h3>
+                            <p><i class="fa fa-calendar"></i> Minggu, 16 November 2025</p>
+                            <p><i class="fa fa-clock"></i> 09:00 WIB - Selesai</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div class="event-wrap">
+                            <h3>Resepsi</h3>
+                             <p><i class="fa fa-calendar"></i> Minggu, 16 November 2025</p>
+                            <p><i class="fa fa-clock"></i> 13:00 WIB - Selesai</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row" style="margin-top: 30px;">
+                     <div class="col-md-12" data-aos="fade-up">
+                         <h3>Lokasi Acara</h3>
+                         <p style="color: #fff !important;"><strong>JW Marriott Hotel Medan</strong><br>Jl. Putri Hijau No.10, Kesawan, Kec. Medan Bar., Kota Medan, Sumatera Utara</p>
+                         <div class="frame-youtube" style="border: 5px solid #ff9c1f; border-radius: 10px; margin-top: 20px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.983905845674!2d98.67756997584523!3d3.591393650228301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131c77f094627%3A0xe3e63e793d5c5897!2sJW%20Marriott%20Hotel%20Medan!5e0!3m2!1sen!2sid!4v1701186782813!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+                         <a href="https://maps.google.com/?cid=6086364269873275390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn btn-primary" style="margin-top:20px;">Buka di Google Maps</a>
+                     </div>
+                 </div>
+            </div>
+            <img src="https://indoinvite.com/nikah/template/honey-bali/btn_ornamen.png" class="box-divider" style="margin-top: 80px;" alt="divider">
+        </div>
+
+        <div id="fh5co-gallery" class="box" style="background-color: #f9f5f0;">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-12 text-center">
+                         <h2 data-aos="fade-up" style="color: #000 !important;">Our Gallery</h2>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="gallery-wrap">
+                         <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up">
+                             <a href="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg" class="image-popup"><img src="Cowokcewk.jpg" alt="gallery" class="img-responsive"></a>
+                         </div>
+                         <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="100">
+                              <a href="Cowokcewk.jpg" class="image-popup"><img src="Cowokcewk.jpg" alt="gallery" class="img-responsive"></a>
+                         </div>
+                         <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="200">
+                             <a href="Cowokcewk.jpg" class="image-popup"><img src="Cowokcewk.jpg" alt="gallery" class="img-responsive"></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <div id="fh5co-gift" class="box box-51 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                         <h1 data-aos="fade-up" style="font-size: 50px;">Titip Hadiah</h1>
+                         <p data-aos="fade-up" style="max-width: 600px; margin: 1rem auto 2rem;">Doa restu Anda adalah karunia yang sangat berarti bagi kami. Namun, jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.</p>
+                         <div class="rek_body" data-aos="fade-up">
+                             <div class="rek_each_soft_white">
+                                 <div class="rek_gambar"><img src="https://indoinvite.com/nikah/bank/bca.svg" alt="BCA"></div>
+                                 <div class="rek_kiri">
+                                     <p class="rek_norek" id="rek-bca">123890***</p>
+                                     <p class="rek_an">a.n. Asep Sutisna</p>
+                                 </div>
+                                 <div class="rek_kanan"><button class="btn rek_copy" data-rek="12345670**">Copy</button></div>
+                             </div>
+                             <div class="rek_each_soft_white">
+                                 <div class="rek_gambar"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri"></div>
+                                 <div class="rek_kiri">
+                                     <p class="rek_norek" id="rek-mandiri">0987654***</p>
+                                     <p class="rek_an">a.n. Wulandari</p>
+                                 </div>
+                                 <div class="rek_kanan"><button class="btn rek_copy" data-rek="0987654321">Copy</button></div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+             <img src="https://indoinvite.com/nikah/template/honey-bali/btn_ornamen.png" class="box-divider" style="margin-top: 80px;" alt="divider">
+        </div>
+
+        <div id="fh5co-started" class="box-3 text-center">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-12">
+                         <h2 data-aos="fade-up">Kehadiran & Ucapan</h2>
+                         <div class="form-ucapan" data-aos="fade-up">
+                              <form id="form-ucapan">
+                                 <div class="form-group"><input type="text" class="form-control" id="nama-ucapan" placeholder="Nama Anda" required></div>
+                                 <div class="form-group">
+                                     <select class="form-control" id="status-kehadiran" required>
+                                         <option value="">Konfirmasi Kehadiran</option>
+                                         <option value="Hadir">Hadir</option>
+                                         <option value="Tidak Hadir">Tidak Hadir</option>
+                                     </select>
+                                 </div>
+                                 <div class="form-group"><textarea class="form-control" id="pesan-ucapan" rows="4" placeholder="Tulis ucapan Anda..." required></textarea></div>
+                                 <button type="submit" class="btn btn-primary">Kirim</button>
+                             </form>
+                         </div>
+                         <div class="box-ucapan" data-aos="fade-up">
+                            <h3 style="text-align: center;">Daftar Ucapan</h3>
+                            <div id="list-ucapan"></div>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container text-center">
+                <p style="color:#000 !important">Terima kasih atas doa dan restu Anda.</p>
+                <h1 style="font-family: 'Sacramento', cursive; font-size: 50px; color: #000 !important;">Asep & Wulan</h1>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="fix-menu" id="bottom_menu" style="display: none;">
+        <div class="item1" onclick="scrollToElement('#page')"><img src="https://indoinvite.com/nikah/home.svg" alt="Home"></div>
+        <div class="item1" onclick="scrollToElement('#fh5co-couple')"><img src="https://indoinvite.com/nikah/people.svg" alt="Couple"></div>
+        <div class="item1" onclick="scrollToElement('#fh5co-gallery')"><img src="https://indoinvite.com/nikah/picture.svg" alt="Gallery"></div>
+        <div class="item1" onclick="scrollToElement('#fh5co-event')"><img src="https://indoinvite.com/nikah/map.svg" alt="Event"></div>
+        <div class="item1" id="volume_button"><img src="https://indoinvite.com/nikah/sound.svg" alt="Music"></div>
+    </div>
+    
+    <audio loop id="playAudio">
+        <source src="Musikjawa.mp3">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            AOS.init({ duration: 1000, once: true });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to');
+            if (guestName) {
+                $('#guestNameTo').text(guestName.replace(/_/g, ' '));
+            }
+
+            $('#btn_open').click(function() {
+                $('#awal').addClass('hidden');
+                $('#page').fadeIn(500);
+                $('#bottom_menu').fadeIn(500);
+                document.getElementById('playAudio').play().catch(e => console.log('Autoplay was prevented.'));
+            });
+            
+            $('#volume_button').click(function() {
+                var audio = document.getElementById('playAudio');
+                var $img = $(this).find('img');
+                if (audio.paused) {
+                    audio.play();
+                    $img.css('opacity', '1');
+                } else {
+                    audio.pause();
+                    $img.css('opacity', '0.5');
+                }
+            });
+
+            const countdownDate = new Date("2025-11-16T09:00:00").getTime();
+            let countdownInterval = setInterval(function() {
+                let now = new Date().getTime();
+                let distance = countdownDate - now;
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                $('#simply-countdown').html(`<div class="simply-section"><span class="simply-amount">${days}</span><span class="simply-word">Hari</span></div><div class="simply-section"><span class="simply-amount">${hours}</span><span class="simply-word">Jam</span></div><div class="simply-section"><span class="simply-amount">${minutes}</span><span class="simply-word">Menit</span></div><div class="simply-section"><span class="simply-amount">${seconds}</span><span class="simply-word">Detik</span></div>`);
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    $('#simply-countdown').html("<h4>Acara telah berlangsung</h4>");
+                }
+            }, 1000);
+
+            $('.gallery-wrap').magnificPopup({ delegate: 'a', type: 'image', gallery:{ enabled:true } });
+
+            window.scrollToElement = function(selector) {
+                 $('html, body').animate({ scrollTop: $(selector).offset().top }, 1000);
+            }
+
+            // Copy rekening button
+            $('.rek_copy').on('click', function() {
+                var rek = $(this).data('rek');
+                navigator.clipboard.writeText(rek);
+                $(this).text('Copied!');
+                setTimeout(() => {
+                    $(this).text('Copy');
+                }, 2000);
+            });
+            
+            const LS_KEY = 'ucapan_asep_wulan_v3';
+            function loadUcapan() {
+                const ucapanData = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+                $('#list-ucapan').empty();
+                if(ucapanData.length > 0){
+                    ucapanData.slice().reverse().forEach(ucapan => {
+                        $('#list-ucapan').append(`<div class="ucapan-item"><strong>${ucapan.nama} <span style="font-size: 12px; color: ${ucapan.status === 'Hadir' ? 'green' : 'red'};">(${ucapan.status})</span></strong><p>${ucapan.pesan}</p></div>`);
+                    });
+                } else {
+                     $('#list-ucapan').append('<p style="color: #555;">Belum ada ucapan.</p>');
+                }
+            }
+            loadUcapan();
+
+            $('#form-ucapan').submit(function(e) {
+                e.preventDefault();
+                let ucapanData = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+                ucapanData.push({ nama: $('#nama-ucapan').val(), status: $('#status-kehadiran').val(), pesan: $('#pesan-ucapan').val() });
+                localStorage.setItem(LS_KEY, JSON.stringify(ucapanData));
+                loadUcapan();
+                $(this)[0].reset();
+                alert('Terima kasih atas konfirmasi dan ucapannya!');
+            });
+        });
+    </script>
+</body>
+</html>
